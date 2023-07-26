@@ -24,7 +24,7 @@ contract Arithmetic {
     error zeroMultiplier();
 
     // Gas: 993
-    function addSolidity(uint256 a, uint256 b) public pure returns (uint256 result) {
+    function addSolidity(uint256 a, uint256 b) public pure returns (uint256) {
         return a + b;
     }
 
@@ -56,7 +56,7 @@ contract Arithmetic {
     }
 
     // Gas: 1015
-    function subSolidity(uint256 a, uint256 b) public pure returns (uint256 result) {
+    function subSolidity(uint256 a, uint256 b) public pure returns (uint256) {
         return a - b;
     }
 
@@ -87,7 +87,7 @@ contract Arithmetic {
     }
 
 
-    function divideSolidity(uint256 a, uint256 b) public pure returns(uint256 result) {
+    function divideSolidity(uint256 a, uint256 b) public pure returns(uint256) {
         return a / b;
     }
 
@@ -113,7 +113,7 @@ contract Arithmetic {
     }
 
 
-    function multiplySolidity(uint256 a, uint256 b) public pure returns(uint256 result) {
+    function multiplySolidity(uint256 a, uint256 b) public pure returns(uint256) {
         return a * b;
     }
 
