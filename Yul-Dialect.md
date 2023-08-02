@@ -1,6 +1,6 @@
-# EVM Dialect
+# Yul Dialect
 
-The default dialect of Yul currently is the EVM dialect for the currently selected version of the EVM.
+The default dialect of Yul is the EVM dialect with the abstraction of stack opcodes except for `pop`.
 
 ### Opcodes marked with:
  

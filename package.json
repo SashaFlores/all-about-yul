@@ -1,0 +1,29 @@
+{
+  "name": "all-about-yul",
+  "version": "1.0.0",
+  "description": "step by step tutorial of using inline assembly",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx hardhat test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SashaFlores/all-about-yul.git#main"
+  },
+  "keywords": [
+    "Yul",
+    "Assembly",
+    "EVM",
+    "gasOptimization"
+  ],
+  "author": "Sasha Flores",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/SashaFlores/all-about-yul/issues"
+  },
+  "homepage": "https://github.com/SashaFlores/all-about-yul/tree/main#readme",
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "hardhat": "^2.17.0"
+  }
+}
