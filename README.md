@@ -2,7 +2,7 @@
 
 This is a step by step tutorial of how to implement Yul in Solidity smart contracts to deploy efficient contracts and save hundreds of thousands in gas cost.
 
-[First Article published on Medium]()
+[First Article published on Medium](https://medium.com/@sasha-flores/unlock-the-power-of-inline-assembly-a-smart-contract-developers-guide-d4c046bb2a95)
 
 ### Helpful Resources to follow all computations and hashing processes in articles:
 
