@@ -15,11 +15,7 @@ module.exports = {
     sepolia: {
       url: `https://eth-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_SEPOLIA_API_KEY}`,
       chainId: 11155111,
-      accounts: [`0x${
-        process.env.PRIVATE_KEY_ONE, 
-        process.env.PRIVATE_KEY_TWO, 
-        process.env.PRIVATE_KEY_THREE
-      }`]
+      accounts: [process.env.PRIVATE_KEY_OWNER, process.env.PRIVATE_KEY_DONOR]
     }
   },
   solidity: {
@@ -36,4 +32,10 @@ module.exports = {
     artifacts: "./artifacts", 
     cache: "./cache"
   },
+  etherscan: {
+    apiKey: {
+      sepolia: process.env.ETHERSCAN_API_KEY
+    }
+  
+  }
 };

@@ -22,7 +22,6 @@ contract AccessStorage {
     //bytes4(keccak256('ZeroDonation()'))
     bytes32 private constant ZeroDonationSelector = 0x9fabe1c100000000000000000000000000000000000000000000000000000000;
 
-
     //keccak256('DonationReceived(address,uint256)')
     bytes32 private constant donationHash = 0x264f630d9efa0d07053a31163641d9fcc0adafc9d9e76f1c37c2ce3a558d2c52;
 
@@ -153,12 +152,8 @@ contract AccessStorage {
         uint256 arrayLength;
 
         assembly {
-            // Load the length of the _donors array from slot 2 
             arrayLength := sload(0x03)
-
             // Allocate memory for the new array (allDonors) using the length of _donors
-            // Load "free memory pointer"
-            let ptr := mload(0x40)
             allDonors := mload(0x40) 
             // Set length of the new array
             mstore(allDonors, arrayLength) 
