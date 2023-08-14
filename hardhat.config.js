@@ -15,7 +15,7 @@ module.exports = {
     sepolia: {
       url: `https://eth-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_SEPOLIA_API_KEY}`,
       chainId: 11155111,
-      accounts: [process.env.PRIVATE_KEY_OWNER, process.env.PRIVATE_KEY_DONOR]
+      accounts: [`0x${process.env.PRIVATE_KEY_OWNER}`, `0x${process.env.PRIVATE_KEY_DONOR}`]
     }
   },
   solidity: {

@@ -8,17 +8,16 @@ async function main() {
   console.log("Deploying account:", await deployer.getAddress());
 
 
-  const AccessContract = await ethers.getContractFactory("AccessStorage");
-  const deployedContract = await AccessContract.connect(deployer).deploy("Wild Life");
-
-  deployedContract.waitForDeployment();
-
-  const deployedContractAddress = await deployedContract.getAddress();
-  console.log("Access Storage Contract Address:", deployedContractAddress);
+  const AccessStorage = await ethers.getContractFactory("AccessStorage");
+  const accessStorage = await AccessStorage.connect(deployer).deploy("Wild Life");
+  await accessStorage.waitForDeployment()
 
 
-  const accessStorage = AccessContract.attach(deployedContractAddress);
-  console.log("Access Storage Contract Attached:", await accessStorage.getAddress());
+  console.log("Access Storage Contract Address:", accessStorage.target);
+
+
+  const contractOwner = await accessStorage.owner();
+  console.log(`Access Storage Contract Owner: ${contractOwner}`);
 
 }
 main()
